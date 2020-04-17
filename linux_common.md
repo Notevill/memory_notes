@@ -60,4 +60,16 @@ $ xclip -i image.png -selection clipboard -target image/png
 ```
 > Для получения MIME типа файла можно использовать `file -b --mime-type $1`
 
+Так же для получения текущей MIME информации можно использовать:
+```
+$ xclip -o -selection clipboard -target TARGETS
+```
+
+Данная команда выводить список MIME типов содержимого буфера обмена.
+
+Для копирования файла лучше использовать следующую схему. Поместить в буфер не ссылку на файл, а в качестве MIME задать `text/uri-list`
+```
+echo "file://$PWD/code.png" | xclip -selection clipboard -target text/uri-list
+```
+
 ***
