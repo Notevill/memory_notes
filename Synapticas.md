@@ -16,5 +16,6 @@ Section "InputClass"
 		Option "HorizTwoFingerScroll" "on"	# разрешить горизонтальную прокрутку двумя пальцами
 EndSection
 ```
+Важно так же проверить, что драйвер synaptics установлен
 
 Так же смотри [arch wiki](https://wiki.archlinux.org/index.php/Touchpad_Synaptics)
